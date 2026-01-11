@@ -109,14 +109,19 @@ const Header = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <motion.button
-            whileTap={{ scale: 0.95 }}
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-white p-2"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </motion.button>
+          <div className="flex items-center space-x-2 md:hidden">
+            <ThemeToggle />
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-white p-2"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </motion.button>
+          </div>
         </div>
+
+
 
         {/* Mobile Navigation */}
         <motion.nav
@@ -145,6 +150,7 @@ const Header = () => {
     </motion.header>
   );
 };
+
 
 export default Header;
 
