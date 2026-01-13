@@ -2,9 +2,9 @@ import emailjs from 'emailjs-com';
 
 // EmailJS configuration
 // Note: These should be replaced with your actual EmailJS credentials
-const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID'; // Replace with your service ID
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'; // Replace with your template ID
-const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY'; // Replace with your public key
+const EMAILJS_SERVICE_ID = 'service_uf1tvnk'; // Replace with your service ID
+const EMAILJS_TEMPLATE_ID = 'template_9tzgxqa'; // Replace with your template ID
+const EMAILJS_PUBLIC_KEY = 'MOh0Uuj6bz6BV50-R'; // Replace with your public key
 
 /**
  * Send email using EmailJS
