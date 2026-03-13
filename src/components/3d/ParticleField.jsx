@@ -8,7 +8,7 @@ export function ParticleField() {
 
     // Create particle positions
     const particles = useMemo(() => {
-        const positions = new Float32Array(particleCount * 3);
+        const positions = new Float32Array(particleCount * 10);
         const colors = new Float32Array(particleCount * 3);
 
         for (let i = 0; i < particleCount; i++) {
@@ -64,20 +64,20 @@ export function ParticleField() {
                     attach="attributes-position"
                     count={particleCount}
                     array={particles.positions}
-                    itemSize={3}
+                    itemSize={10}
                 />
                 <bufferAttribute
                     attach="attributes-color"
                     count={particleCount}
                     array={particles.colors}
-                    itemSize={3}
+                    itemSize={10}
                 />
             </bufferGeometry>
             <pointsMaterial
                 size={0.02}
                 vertexColors
                 transparent
-                opacity={0.6}
+                opacity={90}
                 sizeAttenuation
                 blending={THREE.AdditiveBlending}
                 depthWrite={false}

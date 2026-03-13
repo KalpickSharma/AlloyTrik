@@ -27,7 +27,7 @@ export function TeamMemberCard({ member }) {
             <motion.div
                 whileHover={{ y: -8 }}
                 transition={{ duration: 0.3 }}
-                className="relative overflow-hidden rounded-2xl glass-card transition-all duration-300"
+                className="relative overflow-hidden rounded-2xl glass-effect transition-all duration-300"
                 style={{
                     boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)'
                 }}

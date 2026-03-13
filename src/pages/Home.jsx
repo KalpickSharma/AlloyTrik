@@ -1,31 +1,33 @@
 import Layout from '@/components/layout/Layout';
 import Hero from '@/components/sections/Hero';
-import ScrollingShowcase from '@/components/sections/ScrollingShowcase';
-import FourPillars from '@/components/sections/FourPillars';
 import About from '@/components/sections/About';
+import FourPillars from '@/components/sections/FourPillars';
+import ScrollingShowcase from '@/components/sections/ScrollingShowcase';
+import Stats from '@/components/sections/Stats';
 import Founders from '@/components/sections/Founders';
 
 export function Home() {
-    return (
-        <Layout>
-            <div className="pt-20">
-                {/* Hero Section */}
-                <Hero />
+  return (
+    <Layout>
+      {/* Hero Section - Full screen cinematic */}
+      <Hero />
 
-                {/* Scrolling Showcase */}
-                <ScrollingShowcase />
+      {/* Stats - Animated counter strip */}
+      <Stats />
 
-                {/* Four Pillars */}
-                <FourPillars />
+      {/* About / Community Section */}
+      <About />
 
-                {/* About/Community Section */}
-                <About />
+      {/* Core Pillars / Domains */}
+      <FourPillars />
 
-                {/* Founders Section */}
-                <Founders />
-            </div>
-        </Layout>
-    );
+      {/* Projects Showcase */}
+      <ScrollingShowcase />
+
+      {/* Founders Section */}
+      <Founders />
+    </Layout>
+  );
 }
 
 export default Home;
