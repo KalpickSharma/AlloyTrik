@@ -5,6 +5,7 @@ import FourPillars from '@/components/sections/FourPillars';
 import ScrollingShowcase from '@/components/sections/ScrollingShowcase';
 import Stats from '@/components/sections/Stats';
 import Founders from '@/components/sections/Founders';
+import TeamScroller from '@/components/sections/TeamScroller';
 
 export function Home() {
   return (
@@ -26,6 +27,9 @@ export function Home() {
 
       {/* Founders Section */}
       <Founders />
+
+      {/* Team Scroller Section */}
+      <TeamScroller />
     </Layout>
   );
 }

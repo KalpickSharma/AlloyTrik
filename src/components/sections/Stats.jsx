@@ -112,7 +112,7 @@ const Stats = () => {
                   {stat.suffix}
                 </div>
 
-                <p className="text-xs text-gray-600 uppercase tracking-wider font-medium">
+                <p className="text-xs text--600 uppercase tracking-wider font-medium">
                   {stat.label}
                 </p>
               </motion.div>
