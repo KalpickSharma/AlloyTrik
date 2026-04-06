@@ -53,16 +53,16 @@ const TeamScroller = () => {
       id: 7,
       name: 'Mukul Mehta',
       role: 'Public Relations',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop',
+      image: '/Mukul.jpg',
       color: 'pink'
     },
-    {
+    /*{
       id: 8,
       name: '',
       role: 'Public Relations',
       image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop',
       color: 'green'
-    },
+    },*/
   ];
 
   const colorMap = {
