@@ -46,7 +46,7 @@ const TeamScroller = () => {
       id: 6,
       name: 'Kashvi Tyagi',
       role: 'Public Relations',
-      image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=400&fit=crop',
+      image: '/Kashvi.jpg',
       color: 'purple'
     },
     {
