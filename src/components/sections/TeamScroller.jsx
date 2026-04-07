@@ -4,7 +4,7 @@ import { useRef } from 'react';
 
 const TeamScroller = () => {
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: true, margin: '100px' });
+  const isInView = useInView(sectionRef, { once: true, margin: '50px' });
 
   const team = [
     {
@@ -46,8 +46,9 @@ const TeamScroller = () => {
       id: 6,
       name: 'Kashvi Tyagi',
       role: 'Public Relations',
-      image: '/Kashvi.jpg',
-      color: 'purple'
+      image: '/Kashvi.webp',
+      color: 'purple',
+      objectPosition: 'object-top'
     },
     {
       id: 7,
@@ -56,13 +57,13 @@ const TeamScroller = () => {
       image: '/Mukul.jpg',
       color: 'pink'
     },
-    /*{
+    {
       id: 8,
-      name: '',
-      role: 'Public Relations',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop',
+      name: 'Harsimran Singh',
+      role: 'Content Creator',
+      image: '/Harsimran.jpg',
       color: 'green'
-    },*/
+    }
   ];
 
   const colorMap = {
@@ -74,7 +75,7 @@ const TeamScroller = () => {
 
   return (
     <section id="team" className="section-spacing overflow-hidden relative" ref={sectionRef}>
-      <div className="container mx-auto px-6 mb-16">
+      <div className="container mx-auto px-9 mb-16">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -131,7 +132,7 @@ const TeamScroller = () => {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale-[30%] group-hover:grayscale-0"
+                  className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale-[30%] group-hover:grayscale-0 ${member.objectPosition || 'object-center'}`}
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#030014] via-transparent to-transparent opacity-80" />
