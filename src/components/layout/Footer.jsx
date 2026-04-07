@@ -45,7 +45,7 @@ const Footer = () => {
     { name: 'About', href: '#community' },
     { name: 'Projects', href: '#projects' },
     { name: 'Founders', href: '#founders' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (

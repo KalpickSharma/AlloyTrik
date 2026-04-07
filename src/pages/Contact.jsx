@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { Mail, MessageCircle, MapPin, Clock, ArrowRight } from 'lucide-react';
 import ContactForm from '@/components/forms/ContactForm';
 import Layout from '@/components/layout/Layout';
+import Navbar from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
 
 export function Contact() {
   const contactInfo = [
