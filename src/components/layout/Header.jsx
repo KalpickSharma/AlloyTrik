@@ -18,7 +18,7 @@ const Header = () => {
 
   const navItems = [
     { name: 'Home', href: '/', isRoute: true },
-    { name: 'About', href: '#community', isRoute: false },
+    { name: 'About', href: '#about', isRoute: false },
     { name: 'Domains', href: '#domains', isRoute: false },
     { name: 'Projects', href: '#projects', isRoute: false },
     { name: 'Founders', href: '#founders', isRoute: false },
@@ -59,10 +59,12 @@ const Header = () => {
       );
     }
 
+    const href = item.href.startsWith('#') && location.pathname !== '/' ? `/${item.href}` : item.href;
+
     return (
       <a
         key={item.name}
-        href={item.href}
+        href={href}
         className={className}
         onClick={() => setIsMenuOpen(false)}
       >

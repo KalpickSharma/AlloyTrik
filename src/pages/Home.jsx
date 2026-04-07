@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Layout from '@/components/layout/Layout';
 import Hero from '@/components/sections/Hero';
 import About from '@/components/sections/About';
@@ -8,6 +10,22 @@ import Founders from '@/components/sections/Founders';
 import TeamScroller from '@/components/sections/TeamScroller';
 
 export function Home() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const targetId = location.hash.substring(1);
+      setTimeout(() => {
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }
+  }, [location]);
+
   return (
     <Layout>
       {/* Hero Section - Full screen cinematic */}
