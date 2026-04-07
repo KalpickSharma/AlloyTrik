@@ -12,35 +12,40 @@ const TeamScroller = () => {
       name: 'Abhishek Sharma',
       role: 'Content Creator',
       image: '/abhishek.jpg',
-      color: 'cyan'
+      color: 'cyan',
+      Linkedin: "https://www.linkedin.com/in/abhishek-kumar-sharma-3b2bb0213/"
     },
     {
       id: 2,
       name: 'Shreshtha Anand',
       role: 'Content Creator',
       image: '/Shreshtha.webp',
-      color: 'purple'
+      color: 'purple',
+      Linkedin: "https://www.linkedin.com/in/shreshtha-anand-30b5ba299/"
     },
     {
       id: 3,
       name: 'Sakshi Gupta',
       role: 'Content Creator',
       image: '/Sakshi.webp',
-      color: 'pink'
+      color: 'pink',
+      Linkedin: "https://www.linkedin.com/in/sakshi-gupta-042390346/"
     },
     {
       id: 4,
       name: 'Nandani Gupta',
       role: 'Content Creator',
       image: '/Nandani.webp',
-      color: 'green'
+      color: 'green',
+      Linkedin: "https://www.linkedin.com/in/nandaniiguptaa/"
     },
     {
       id: 5,
       name: 'Pushkar Tripathi',
       role: 'Public Relations',
       image: '/Pushkar.webp',
-      color: 'cyan'
+      color: 'cyan',
+      Linkedin: "https://www.linkedin.com/in/pushkar-tripathi-46a02829a/"
     },
     {
       id: 6,
@@ -48,21 +53,24 @@ const TeamScroller = () => {
       role: 'Public Relations',
       image: '/Kashvi.webp',
       color: 'purple',
-      objectPosition: 'object-top'
+      objectPosition: 'object-top',
+      Linkedin: "https://www.linkedin.com/in/kashvi-361477311/"
     },
     {
       id: 7,
       name: 'Mukul Mehta',
       role: 'Public Relations',
       image: '/Mukul.jpg',
-      color: 'pink'
+      color: 'pink',
+      Linkedin: "https://www.linkedin.com/in/mukul-mehta83/",
     },
     {
       id: 8,
       name: 'Harsimran Singh',
       role: 'Content Creator',
       image: '/Harsimran.jpg',
-      color: 'green'
+      color: 'green',
+      Linkedin: "https://www.linkedin.com/in/harsimransinghtech/",
     }
   ];
 
@@ -139,15 +147,21 @@ const TeamScroller = () => {
 
                 {/* Social Links on hover */}
                 <div className="absolute inset-0 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-sm">
-                  <motion.a whileHover={{ scale: 1.2, y: -2 }} href="#" className="p-2 glass-card rounded-xl hover:text-cyan-400 transition-colors">
-                    <Github size={18} />
-                  </motion.a>
-                  <motion.a whileHover={{ scale: 1.2, y: -2 }} href="#" className="p-2 glass-card rounded-xl hover:text-blue-400 transition-colors">
-                    <Linkedin size={18} />
-                  </motion.a>
-                  <motion.a whileHover={{ scale: 1.2, y: -2 }} href="#" className="p-2 glass-card rounded-xl hover:text-blue-300 transition-colors">
-                    <Twitter size={18} />
-                  </motion.a>
+                  {member.Github && (
+                    <motion.a whileHover={{ scale: 1.2, y: -2 }} href={member.Github} target="_blank" rel="noopener noreferrer" className="p-2 glass-card rounded-xl hover:text-cyan-400 transition-colors">
+                      <Github size={18} />
+                    </motion.a>
+                  )}
+                  {member.Linkedin && (
+                    <motion.a whileHover={{ scale: 1.2, y: -2 }} href={member.Linkedin} target="_blank" rel="noopener noreferrer" className="p-2 glass-card rounded-xl hover:text-blue-400 transition-colors">
+                      <Linkedin size={18} />
+                    </motion.a>
+                  )}
+                  {member.Twitter && (
+                    <motion.a whileHover={{ scale: 1.2, y: -2 }} href={member.Twitter} target="_blank" rel="noopener noreferrer" className="p-2 glass-card rounded-xl hover:text-blue-300 transition-colors">
+                      <Twitter size={18} />
+                    </motion.a>
+                  )}
                 </div>
               </div>
 
