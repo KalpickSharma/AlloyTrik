@@ -56,7 +56,7 @@ const About = () => {
   };
 
   return (
-    <section id="community" className="section-spacing relative overflow-hidden" ref={sectionRef}>
+    <section id="about" className="section-spacing relative overflow-hidden" ref={sectionRef}>
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-cyan-500/5 rounded-full blur-[150px]" />
