@@ -55,9 +55,9 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="inline-flex items-center space-x-2 glass-card rounded-full px-5 py-2.5 mb-10"
+          className="inline-flex items-center space-x-2 glass-card rounded-full px-5 py-2.5 mb-11 mt-10"
         >
-          <Sparkles size={14} className="text-cyan-400" />
+          <Sparkles size={10} className="text-cyan-400" />
           <span className="text-xs font-medium text-gray-300 uppercase tracking-widest">
             Collaborative Space for Creators & Developers
           </span>

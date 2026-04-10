@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import MusicPlayer from './MusicPlayer';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -125,6 +126,10 @@ const Header = () => {
                 <NavLink item={item} index={index} />
               </motion.div>
             ))}
+
+            <div className="mr-2">
+              <MusicPlayer />
+            </div>
 
             {/* Join CTA */}
             <motion.a
