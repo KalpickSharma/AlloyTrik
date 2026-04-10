@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Toaster } from 'sonner';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
+import TeamInfo from './pages/TeamInfo';
 import './App.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/team" element={<TeamInfo />} />
       </Routes>
     </BrowserRouter>
   );
