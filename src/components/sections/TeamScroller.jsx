@@ -71,6 +71,14 @@ const TeamScroller = () => {
       image: '/Harsimran.jpg',
       color: 'green',
       Linkedin: "https://www.linkedin.com/in/harsimransinghtech/",
+    },
+    {
+      id: 9,
+      name: 'Shanket Kumar',
+      role: 'Social Reposter',
+      image: '/Sanket.webp',
+      color: 'green',
+      Linkedin: "https://www.linkedin.com/in/shanket-kumar-codeex/",
     }
   ];
 

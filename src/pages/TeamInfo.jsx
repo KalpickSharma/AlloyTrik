@@ -11,7 +11,7 @@ const members = [
     role: 'Founder & CEO',
     image: '/1ad91227420340fa8a847657a28393d3.jpg',
     bio: 'On a mission to connect innovation, technology, and collaboration in the Digital era. Leading AlloyTrik with a vision to create a thriving ecosystem where Web3 meets AI, and Design meets Development.',
-    skills: ['Leadership','Strategy', 'Web3', 'Strategy', 'Innovation',"Design","Python","AI","development"],
+    skills: ['Leadership', 'Strategy', 'Web3', 'Strategy', 'Innovation', "Design", "Python", "AI", "development"],
     social: {
       linkedin: 'https://www.linkedin.com/in/kalpicksharma',
       email: 'mailto:kalpicksharma@gmail.com',
@@ -26,7 +26,7 @@ const members = [
     role: 'Co-Founder & CSO',
     image: '/36d58449-3200-4192-9117-2e27d08e03a6.jpg',
     bio: 'Tech enthusiast and developer advocate. Building the future of collaborative development with cutting-edge technologies and fostering an inclusive community for creators worldwide.',
-    skills: ['Development', 'AI', 'Community','blockchain','Web3','javascript',],
+    skills: ['Development', 'AI', 'Community', 'blockchain', 'Web3', 'javascript',],
     social: {
       linkedin: 'https://www.linkedin.com/in/oshaib-beg-3175b4251/',
       email: 'mailto:oshaibbeg181203@gmail.com',
@@ -41,7 +41,7 @@ const members = [
     role: 'Content Creator',
     image: '/abhishek.jpg',
     color: 'cyan',
-    bio:`I’m Abhishek Kumar Sharma a content creator at Alloytrik and an active member of IEEE with a strong involvement in tech communities
+    bio: `I’m Abhishek Kumar Sharma a content creator at Alloytrik and an active member of IEEE with a strong involvement in tech communities
 
 I’ve contributed as a volunteer in events like FlutterSphere 25 ICRTICC 25 Delhi NCR Kotlin Conf 24 and The ACE 24 and was part of GSSOC 24
 
@@ -55,7 +55,7 @@ I’m interested in AI and ML and actively engage with communities like GDG GCET
     role: 'Content Creator',
     image: '/Shreshtha.webp',
     color: 'purple',
-    bio:"I am a third year Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning with a strong interest in emerging technologies. I enjoy learning building and connecting with people who are working on meaningful ideasI actively participate in tech events and community initiatives and like contributing through organizing coordinating or supporting teams to make things run smoothly. I am comfortable handling multiple tasks while staying focused on impact.Areas of interest include AI and ML tech communities events educational outreach and project coordination Open to collaborations volunteering and opportunities where I can contribute to learning innovation and tech for good",
+    bio: "I am a third year Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning with a strong interest in emerging technologies. I enjoy learning building and connecting with people who are working on meaningful ideasI actively participate in tech events and community initiatives and like contributing through organizing coordinating or supporting teams to make things run smoothly. I am comfortable handling multiple tasks while staying focused on impact.Areas of interest include AI and ML tech communities events educational outreach and project coordination Open to collaborations volunteering and opportunities where I can contribute to learning innovation and tech for good",
     social: { linkedin: "https://www.linkedin.com/in/shreshtha-anand-30b5ba299/" },
     type: 'core'
   },
@@ -74,7 +74,7 @@ I’m interested in AI and ML and actively engage with communities like GDG GCET
     role: 'Content Creator',
     image: '/Nandani.webp',
     color: 'green',
-    bio:`I’m Nandani Gupta a Computer Science Data Science student and tech content creator focused on learning building and helping others grow in tech
+    bio: `I’m Nandani Gupta a Computer Science Data Science student and tech content creator focused on learning building and helping others grow in tech
 
 I’m currently strengthening my Python and problem solving skills through real world contributions and have participated in open source programs like GSSoC SSOC SWoC OSCI and OSCG where I collaborated with maintainers and improved projects
 
@@ -94,7 +94,7 @@ Interested in open source mentorship community building and content creation and
     role: 'Public Relations',
     image: '/Pushkar.webp',
     color: 'cyan',
-    bio:`I’m a Computer Science Engineering student at GL Bajaj Institute of Technology, Greater Noida,  I am driven by curiosity and fueled by a need to understand not just how things work, but why they exist in the first place.
+    bio: `I’m a Computer Science Engineering student at GL Bajaj Institute of Technology, Greater Noida,  I am driven by curiosity and fueled by a need to understand not just how things work, but why they exist in the first place.
 
 I find myself at the crossroads of logic and philosophy. While my academic journey revolves around programming, systems, and algorithms, my deeper interests extend into history, geopolitics, and theoretical physics. I believe real innovation happens when you blend technical skills with critical thinking and a strong sense of purpose.
 
@@ -110,7 +110,7 @@ Looking to connect with like-minded individuals who believe in depth over noise,
     role: 'Public Relations',
     image: '/Kashvi.webp',
     color: 'purple',
-    bio:`I am a pre-final year Computer Science Engineering student with a strong interest in pursuing a career as an AI Engineer. My core technical skills include Python and its libraries as well as Java, which I actively apply to strengthen my problem-solving and programming foundation.
+    bio: `I am a pre-final year Computer Science Engineering student with a strong interest in pursuing a career as an AI Engineer. My core technical skills include Python and its libraries as well as Java, which I actively apply to strengthen my problem-solving and programming foundation.
 
 I am particularly interested in the fields of Artificial Intelligence, Machine Learning, and Data-Driven Technologies, and I am committed to continuous learning to expand my technical expertise.
 
@@ -158,30 +158,70 @@ Actively targeting AI Engineer roles in FinTech, SaaS, and product-led tech - re
 📩 harsimransingh27448@gmail.com | localsyncai.in`,
     social: { linkedin: "https://www.linkedin.com/in/harsimransinghtech/" },
     type: 'core'
+  },
+  {
+    id: 't9',
+    name: 'Shanket Kumar',
+    role: 'Social Reposter',
+    image: '/Sanket.webp',
+    color: 'green',
+    bio: `SDE Intern — Parliament of India
+       Where 1.4 billion voices are represented — I made sure the systems behind them never broke.
+ 
+ ITS Intern — Engineers India Limited
+      Built full-stack solutions for an organization that literally keeps the nation's infrastructure running.
+ 
+ Content Strategist — AlloyTrik
+      Didn't just write content — built the entire narrative identity of a community from the ground up.
+ 
+Mentor — Social Winter of Code
+     Turned first-time contributors into confident open-source engineers. One at a time.
+ 
+Citizen Scientist — NASA
+      Most people look up at space. I got to help study it.
+ 
+ Cloud Innovator — Google
+      Learned to build at Google's scale. That standard doesn't leave you.
+ 
+Mentor — GirlScript Summer of Code
+      Because the best thing you can do with a skill — is make sure someone else has it too.
+ 
+ AI Intern — AICTE
+      Applied AI research inside the body that shapes how an entire nation learns technology.
+ 
+Student Partner — Internshala
+      Every student I reached had one more shot at the opportunity they deserved.
+ 
+Campus Ambassador — Let's Upgrade
+      Walked into classrooms and left communities behind.
+
+If our paths should cross — let's make it count. 📩 contact.shanket@gmail.com`,
+    social: { linkedin: "https://www.linkedin.com/in/shanket-kumar-codeex/" },
+    type: 'core'
   }
 ];
 
 const colorMap = {
-  cyan: { 
-    badge: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/30', 
+  cyan: {
+    badge: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/30',
     glow: 'hover:shadow-[0_0_30px_rgba(6,182,212,0.3)]',
     text: 'text-cyan-400',
     ring: 'ring-cyan-500/30'
   },
-  purple: { 
-    badge: 'bg-purple-500/20 text-purple-300 border-purple-500/30', 
+  purple: {
+    badge: 'bg-purple-500/20 text-purple-300 border-purple-500/30',
     glow: 'hover:shadow-[0_0_30px_rgba(168,85,247,0.3)]',
     text: 'text-purple-400',
     ring: 'ring-purple-500/30'
   },
-  pink: { 
-    badge: 'bg-pink-500/20 text-pink-300 border-pink-500/30', 
+  pink: {
+    badge: 'bg-pink-500/20 text-pink-300 border-pink-500/30',
     glow: 'hover:shadow-[0_0_30px_rgba(236,72,153,0.3)]',
     text: 'text-pink-400',
     ring: 'ring-pink-500/30'
   },
-  green: { 
-    badge: 'bg-green-500/20 text-green-300 border-green-500/30', 
+  green: {
+    badge: 'bg-green-500/20 text-green-300 border-green-500/30',
     glow: 'hover:shadow-[0_0_30px_rgba(34,197,94,0.3)]',
     text: 'text-green-400',
     ring: 'ring-green-500/30'
@@ -197,7 +237,7 @@ const TeamInfo = () => {
   return (
     <div className="min-h-screen bg-[#030014] text-white flex flex-col">
       <Header />
-      
+
       <main className="flex-grow pt-32 pb-20 relative overflow-hidden">
         {/* Background Gradients */}
         <div className="absolute inset-0 pointer-events-none z-0">
@@ -227,9 +267,9 @@ const TeamInfo = () => {
             </h2>
             <div className="flex flex-wrap justify-center gap-8">
               {founders.map((member) => (
-                <TeamCard 
-                  key={member.id} 
-                  member={member} 
+                <TeamCard
+                  key={member.id}
+                  member={member}
                   onClick={() => setSelectedId(member.id)}
                   isExpanded={selectedId === member.id}
                 />
@@ -244,9 +284,9 @@ const TeamInfo = () => {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 place-items-center">
               {coreTeam.map((member) => (
-                <TeamCard 
-                  key={member.id} 
-                  member={member} 
+                <TeamCard
+                  key={member.id}
+                  member={member}
                   onClick={() => setSelectedId(member.id)}
                   isExpanded={selectedId === member.id}
                 />
@@ -264,9 +304,9 @@ const TeamInfo = () => {
               onClick={() => setSelectedId(null)}
               className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-md"
             >
-              <ExpandedCard 
-                member={members.find(m => m.id === selectedId)} 
-                onClose={() => setSelectedId(null)} 
+              <ExpandedCard
+                member={members.find(m => m.id === selectedId)}
+                onClose={() => setSelectedId(null)}
               />
             </motion.div>
           )}
@@ -290,9 +330,9 @@ const TeamCard = ({ member, onClick, isExpanded }) => {
       className={`glass-card rounded-2xl p-4 cursor-pointer transition-all duration-300 w-full max-w-sm ${colorConfig.glow} ${isExpanded ? 'opacity-0' : ''}`}
     >
       <motion.div layoutId={`image-${member.id}`} className="relative w-full aspect-square rounded-xl overflow-hidden mb-4">
-        <img 
-          src={member.image} 
-          alt={member.name} 
+        <img
+          src={member.image}
+          alt={member.name}
           className={`w-full h-full object-cover transition-transform duration-500 hover:scale-110 ${member.objectPosition || 'object-center'}`}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60" />
@@ -316,7 +356,7 @@ const ExpandedCard = ({ member, onClose }) => {
       className={`glass-card relative overflow-hidden rounded-3xl w-full max-w-3xl bg-[#0a0a0a]/90 flex flex-col md:flex-row shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/10`}
       onClick={(e) => e.stopPropagation()}
     >
-      <button 
+      <button
         onClick={onClose}
         className="absolute top-4 right-4 z-10 p-2 bg-black/50 hover:bg-white/10 rounded-full text-gray-400 hover:text-white transition-colors"
       >
@@ -324,9 +364,9 @@ const ExpandedCard = ({ member, onClose }) => {
       </button>
 
       <motion.div layoutId={`image-${member.id}`} className="w-full md:w-2/5 aspect-square md:aspect-auto">
-        <img 
-          src={member.image} 
-          alt={member.name} 
+        <img
+          src={member.image}
+          alt={member.name}
           className={`w-full h-full object-cover ${member.objectPosition || 'object-center'}`}
         />
       </motion.div>
@@ -334,7 +374,7 @@ const ExpandedCard = ({ member, onClose }) => {
       <motion.div layoutId={`content-${member.id}`} className="w-full md:w-3/5 p-8 flex flex-col justify-center relative">
         <h3 className="text-3xl font-bold text-white mb-2 font-['Space_Grotesk']">{member.name}</h3>
         <p className={`text-sm font-medium ${colorConfig.text} mb-4`}>{member.role}</p>
-        
+
         {member.bio && (
           <p className="text-gray-400 text-sm leading-relaxed mb-6">
             {member.bio}
