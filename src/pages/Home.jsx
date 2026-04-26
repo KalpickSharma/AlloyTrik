@@ -8,6 +8,7 @@ import ScrollingShowcase from '@/components/sections/ScrollingShowcase';
 import Stats from '@/components/sections/Stats';
 import Founders from '@/components/sections/Founders';
 import TeamScroller from '@/components/sections/TeamScroller';
+import StreeLabs from '@/components/sections/StreeLabs';
 
 export function Home() {
   const location = useLocation();
@@ -48,6 +49,9 @@ export function Home() {
 
       {/* Team Scroller Section */}
       <TeamScroller />
+
+      {/* Stree Labs Section */}
+      <StreeLabs />
     </Layout>
   );
 }

@@ -24,6 +24,7 @@ const Header = () => {
     { name: 'Projects', href: '#projects', isRoute: false },
     { name: 'Founders', href: '#founders', isRoute: false },
     { name: 'Team', href: '/team', isRoute: true },
+    { name: 'Stree Labs', href: '/streelabs', isRoute: true },
     { name: 'Contact', href: '/contact', isRoute: true },
   ];
 

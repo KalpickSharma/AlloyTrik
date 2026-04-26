@@ -3,6 +3,7 @@ import { Toaster } from 'sonner';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import TeamInfo from './pages/TeamInfo';
+import StreeLabsPage from './pages/StreeLabs';
 import './App.css';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/team" element={<TeamInfo />} />
+        <Route path="/streelabs" element={<StreeLabsPage />} />
       </Routes>
     </BrowserRouter>
   );
