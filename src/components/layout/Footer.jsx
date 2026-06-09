@@ -46,7 +46,6 @@ const Footer = () => {
     { name: 'Projects', href: '#projects' },
     { name: 'Founders', href: '#founders' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Team', href: '/team' },
     { name: 'Stree Labs', href: '/streelabs' },
   ];
 
