@@ -32,6 +32,39 @@ function useCounter(end, duration = 2000, start = 0, isActive = false) {
   return count;
 }
 
+const StatItem = ({ stat, index, isInView, config }) => {
+  const count = useCounter(stat.value, 2000, 0, isInView);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      className="text-center group"
+    >
+      <motion.div
+        whileHover={{ scale: 1.1, y: -3 }}
+        className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-r ${config.gradient} mb-4`}
+        style={{ boxShadow: `0 0 20px ${config.glow}` }}
+      >
+        <stat.icon size={24} className="text-white" />
+      </motion.div>
+
+      <div
+        className={`text-3xl md:text-4xl font-bold ${config.text} mb-2`}
+        style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+      >
+        {count}
+        {stat.suffix}
+      </div>
+
+      <p className="text-xs text--600 uppercase tracking-wider font-medium">
+        {stat.label}
+      </p>
+    </motion.div>
+  );
+};
+
 /* ═══════════════════════════════════════════════════
    STATS SECTION
    ═══════════════════════════════════════════════════ */
@@ -84,40 +117,15 @@ const Stats = () => {
 
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-          {stats.map((stat, index) => {
-            const config = colorMap[stat.color];
-            const count = useCounter(stat.value, 2000, 0, isInView);
-
-            return (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center group"
-              >
-                <motion.div
-                  whileHover={{ scale: 1.1, y: -3 }}
-                  className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-r ${config.gradient} mb-4`}
-                  style={{ boxShadow: `0 0 20px ${config.glow}` }}
-                >
-                  <stat.icon size={24} className="text-white" />
-                </motion.div>
-
-                <div
-                  className={`text-3xl md:text-4xl font-bold ${config.text} mb-2`}
-                  style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-                >
-                  {count}
-                  {stat.suffix}
-                </div>
-
-                <p className="text-xs text--600 uppercase tracking-wider font-medium">
-                  {stat.label}
-                </p>
-              </motion.div>
-            );
-          })}
+          {stats.map((stat, index) => (
+            <StatItem
+              key={stat.label}
+              stat={stat}
+              index={index}
+              isInView={isInView}
+              config={colorMap[stat.color]}
+            />
+          ))}
         </div>
       </div>
 

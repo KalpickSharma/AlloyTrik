@@ -10,15 +10,12 @@ import * as THREE from 'three';
 function NebulaParticles({ count = 1500 }) {
   const pointsRef = useRef();
 
-  const { positions, colors, sizes } = useMemo(() => {
+  const { positions, colors } = useMemo(() => {
     const positions = new Float32Array(count * 3);
     const colors = new Float32Array(count * 3);
-    const sizes = new Float32Array(count);
 
     const cyan = new THREE.Color('#00d4ff');
     const purple = new THREE.Color('#a855f7');
-    const pink = new THREE.Color('#ec4899');
-    const colorChoices = [cyan, purple, pink];
 
     for (let i = 0; i < count; i++) {
       const i3 = i * 3;
@@ -27,17 +24,14 @@ function NebulaParticles({ count = 1500 }) {
       positions[i3 + 1] = (Math.random() - 0.5) * 30;
       positions[i3 + 2] = (Math.random() - 0.5) * 20 - 5;
 
-      const color = colorChoices[Math.floor(Math.random() * colorChoices.length)];
       const mix = Math.random();
       const blended = new THREE.Color().lerpColors(cyan, purple, mix);
       colors[i3] = blended.r;
       colors[i3 + 1] = blended.g;
       colors[i3 + 2] = blended.b;
-
-      sizes[i] = Math.random() * 3 + 0.5;
     }
 
-    return { positions, colors, sizes };
+    return { positions, colors };
   }, [count]);
 
   useFrame((state) => {

@@ -5,11 +5,17 @@ import ParticleField from './ParticleField';
 
 export function Scene3D() {
     return (
-        <div className="fixed inset-0 z-0 pointer-events-none">
+        <div className="fixed inset-0 -z-10 h-screen w-full overflow-hidden pointer-events-none">
+            {/* Ambient gradients behind the canvas */}
+            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] rounded-full bg-cyan-500/5 blur-[120px] animate-pulse" style={{ animationDuration: '8s' }} />
+            <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] rounded-full bg-purple-500/5 blur-[120px] animate-pulse" style={{ animationDuration: '10s' }} />
+            <div className="absolute bottom-0 left-1/3 w-[400px] h-[400px] rounded-full bg-pink-500/4 blur-[100px] animate-pulse" style={{ animationDuration: '12s' }} />
+
             <Canvas
-                camera={{ position: [0, 0, 5], fov: 75 }}
+                camera={{ position: [0, 0, 6], fov: 60 }}
+                gl={{ antialias: false, alpha: true, powerPreference: 'low-power' }}
                 style={{ background: 'transparent' }}
-                dpr={[1, 2]} // Pixel ratio for performance
+                dpr={[1, 1.5]} // Pixel ratio for performance
             >
                 <Suspense fallback={null}>
                     {/* Ambient lighting */}

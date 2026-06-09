@@ -1,6 +1,128 @@
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import { ExternalLink, Linkedin, Mail, ArrowRight } from 'lucide-react';
 import { useRef } from 'react';
+
+const FounderCard = ({ founder, index, isInView, config }) => {
+  const cardRef = useRef(null);
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  // Smooth springs for rotation
+  const springConfig = { damping: 25, stiffness: 250, mass: 0.5 };
+  const rotateX = useSpring(useTransform(y, [-180, 180], [12, -12]), springConfig);
+  const rotateY = useSpring(useTransform(x, [-180, 180], [-12, 12]), springConfig);
+
+  const handleMouseMove = (event) => {
+    if (!cardRef.current) return;
+    const rect = cardRef.current.getBoundingClientRect();
+    const width = rect.width;
+    const height = rect.height;
+    const mouseX = event.clientX - rect.left - width / 2;
+    const mouseY = event.clientY - rect.top - height / 2;
+    x.set(mouseX);
+    y.set(mouseY);
+  };
+
+  const handleMouseLeave = () => {
+    x.set(0);
+    y.set(0);
+  };
+
+  return (
+    <motion.div
+      ref={cardRef}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      style={{
+        rotateX,
+        rotateY,
+        transformStyle: 'preserve-3d',
+      }}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, delay: 0.3 + index * 0.2 }}
+      whileHover={{ y: -8 }}
+      className={`group glass-card rounded-3xl p-8 ${config.neonClass} transition-all duration-500 relative overflow-hidden`}
+    >
+      {/* Hover glow */}
+      <div
+        className={`absolute inset-0 bg-gradient-to-br ${config.gradient} opacity-0 group-hover:opacity-[0.03] transition-opacity duration-500`}
+      />
+
+      <div className="relative z-10" style={{ transform: 'translateZ(35px)' }}>
+        {/* Avatar + info */}
+        <div className="flex items-start space-x-5 mb-6">
+          <div className="relative flex-shrink-0">
+            <div
+              className={`absolute inset-0 bg-gradient-to-r ${config.gradient} rounded-2xl blur-lg opacity-0 group-hover:opacity-40 transition-opacity duration-500`}
+            />
+            <img
+              src={founder.avatar}
+              alt={founder.name}
+              className={`w-20 h-20 rounded-2xl object-cover ring-2 ${config.ring} relative z-10`}
+            />
+          </div>
+          <div>
+            <h3
+              className="text-xl font-bold text-white mb-1"
+              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+            >
+              {founder.name}
+            </h3>
+            <p className={`text-sm font-medium ${config.text}`}>{founder.role}</p>
+          </div>
+        </div>
+
+        {/* Bio */}
+        <p className="text-gray-400 text-sm leading-relaxed mb-6">{founder.bio}</p>
+
+        {/* Skills */}
+        <div className="flex flex-wrap gap-2 mb-6">
+          {founder.skills.map((skill) => (
+            <span
+              key={skill}
+              className={`px-3 py-1 rounded-full text-[10px] font-medium border ${config.badge}`}
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
+
+        {/* Stats */}
+        <div className="flex space-x-6 mb-6 pb-6 border-b border-white/5">
+          <div>
+            <p className={`text-2xl font-bold ${config.text}`}>{founder.stats.projects}+</p>
+            <p className="text-[10px] text-gray-600 uppercase tracking-wider">Projects</p>
+          </div>
+          <div>
+            <p className={`text-2xl font-bold ${config.text}`}>{founder.stats.contributions}+</p>
+            <p className="text-[10px] text-gray-600 uppercase tracking-wider">Contributions</p>
+          </div>
+        </div>
+
+        {/* Social Links */}
+        <div className="flex space-x-3">
+          <motion.a
+            href={founder.social.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1, y: -2 }}
+            className="p-2.5 glass-card rounded-xl hover:border-cyan-500/30 transition-colors"
+          >
+            <Linkedin size={16} className="text-gray-400 hover:text-white transition-colors" />
+          </motion.a>
+          <motion.a
+            href={founder.social.email}
+            whileHover={{ scale: 1.1, y: -2 }}
+            className="p-2.5 glass-card rounded-xl hover:border-purple-500/30 transition-colors"
+          >
+            <Mail size={16} className="text-gray-400 hover:text-white transition-colors" />
+          </motion.a>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
 
 const Founders = () => {
   const sectionRef = useRef(null);
@@ -99,91 +221,13 @@ const Founders = () => {
           {founders.map((founder, index) => {
             const config = colorConfig[founder.color];
             return (
-              <motion.div
+              <FounderCard
                 key={founder.name}
-                initial={{ opacity: 0, y: 50 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.3 + index * 0.2 }}
-                whileHover={{ y: -8 }}
-                className={`group glass-card rounded-3xl p-8 ${config.neonClass} transition-all duration-500 relative overflow-hidden`}
-              >
-                {/* Hover glow */}
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br ${config.gradient} opacity-0 group-hover:opacity-[0.03] transition-opacity duration-500`}
-                />
-
-                <div className="relative z-10">
-                  {/* Avatar + info */}
-                  <div className="flex items-start space-x-5 mb-6">
-                    <div className="relative flex-shrink-0">
-                      <div
-                        className={`absolute inset-0 bg-gradient-to-r ${config.gradient} rounded-2xl blur-lg opacity-0 group-hover:opacity-40 transition-opacity duration-500`}
-                      />
-                      <img
-                        src={founder.avatar}
-                        alt={founder.name}
-                        className={`w-20 h-20 rounded-2xl object-cover ring-2 ${config.ring} relative z-10`}
-                      />
-                    </div>
-                    <div>
-                      <h3
-                        className="text-xl font-bold text-white mb-1"
-                        style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-                      >
-                        {founder.name}
-                      </h3>
-                      <p className={`text-sm font-medium ${config.text}`}>{founder.role}</p>
-                    </div>
-                  </div>
-
-                  {/* Bio */}
-                  <p className="text-gray-400 text-sm leading-relaxed mb-6">{founder.bio}</p>
-
-                  {/* Skills */}
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {founder.skills.map((skill) => (
-                      <span
-                        key={skill}
-                        className={`px-3 py-1 rounded-full text-[10px] font-medium border ${config.badge}`}
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Stats */}
-                  <div className="flex space-x-6 mb-6 pb-6 border-b border-white/5">
-                    <div>
-                      <p className={`text-2xl font-bold ${config.text}`}>{founder.stats.projects}+</p>
-                      <p className="text-[10px] text-gray-600 uppercase tracking-wider">Projects</p>
-                    </div>
-                    <div>
-                      <p className={`text-2xl font-bold ${config.text}`}>{founder.stats.contributions}+</p>
-                      <p className="text-[10px] text-gray-600 uppercase tracking-wider">Contributions</p>
-                    </div>
-                  </div>
-
-                  {/* Social Links */}
-                  <div className="flex space-x-3">
-                    <motion.a
-                      href={founder.social.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.1, y: -2 }}
-                      className="p-2.5 glass-card rounded-xl hover:border-cyan-500/30 transition-colors"
-                    >
-                      <Linkedin size={16} className="text-gray-400 hover:text-white transition-colors" />
-                    </motion.a>
-                    <motion.a
-                      href={founder.social.email}
-                      whileHover={{ scale: 1.1, y: -2 }}
-                      className="p-2.5 glass-card rounded-xl hover:border-purple-500/30 transition-colors"
-                    >
-                      <Mail size={16} className="text-gray-400 hover:text-white transition-colors" />
-                    </motion.a>
-                  </div>
-                </div>
-              </motion.div>
+                founder={founder}
+                index={index}
+                isInView={isInView}
+                config={config}
+              />
             );
           })}
         </div>

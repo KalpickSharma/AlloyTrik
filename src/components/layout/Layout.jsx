@@ -1,12 +1,12 @@
 import Header from './Header';
 import Footer from './Footer';
-import Background3D from '../canvas/Background3D';
+import Scene3D from '../3d/Scene3D';
 
 const Layout = ({ children }) => {
   return (
     <div className="min-h-screen bg-[#030014] text-foreground overflow-x-hidden relative">
-      {/* 3D Particle Background */}
-      <Background3D />
+      {/* 3D Particle & Interactive Shapes Background */}
+      <Scene3D />
 
       {/* Subtle grid overlay */}
       <div className="fixed inset-0 bg-grid pointer-events-none z-0 opacity-30" />

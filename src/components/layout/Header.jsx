@@ -26,7 +26,7 @@ const Header = () => {
     { name: 'Contact', href: '/contact', isRoute: true },
   ];
 
-  const NavLink = ({ item, index, isMobile = false }) => {
+  const NavLink = ({ item, isMobile = false }) => {
     const isActive = item.isRoute && location.pathname === item.href;
     
     const className = `relative text-sm font-medium tracking-wide uppercase transition-all duration-300 ${

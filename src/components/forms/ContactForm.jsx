@@ -32,7 +32,7 @@ export function ContactForm() {
       });
       reset();
       setTimeout(() => setIsSuccess(false), 5000);
-    } catch (error) {
+    } catch {
       toast.error('Failed to send message', {
         description: 'Please try again or contact us directly.',
       });
