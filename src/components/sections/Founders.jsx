@@ -9,7 +9,7 @@ const Founders = () => {
   const founders = [
     {
       name: 'Kalpick Sharma',
-      role: 'Founder & CEO',
+      role: 'Founder & Ecosystem Builder',
       avatar: '/1ad91227420340fa8a847657a28393d3.jpg',
       bio: 'On a mission to connect innovation, technology, and collaboration in the Digital era. Leading AlloyTrik with a vision to create a thriving ecosystem where Web3 meets AI, and Design meets Development.',
       skills: ['Leadership', 'Web3', 'Strategy', 'Innovation'],
